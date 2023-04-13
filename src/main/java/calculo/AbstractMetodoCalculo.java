@@ -4,6 +4,10 @@ import java.util.ArrayList;
 public abstract class AbstractMetodoCalculo {
     private int opcao;
     
+    public AbstractMetodoCalculo(int opcao){
+        this.setOpcao(opcao);
+    }
+    
      public int getOpcao() {
         return opcao;
     }

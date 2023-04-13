@@ -4,9 +4,11 @@ import java.util.Collections;
 
 public class CalculoMaior extends AbstractMetodoCalculo{
 
-    public CalculoMaior(){
-        this.setOpcao(2);
+    public CalculoMaior(int opcao){
+        //Construtor da classe pai
+        super(opcao);
     }
+    
     @Override
     public double calcular(ArrayList<Double> numeros) {
         return Collections.max(numeros);

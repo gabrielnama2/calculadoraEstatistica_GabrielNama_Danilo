@@ -2,9 +2,10 @@ package calculo;
 import java.util.ArrayList;
 
 public class CalculoDesvioPadrao extends AbstractMetodoCalculo{
-    
-    public CalculoDesvioPadrao(){
-        this.setOpcao(5);
+
+    public CalculoDesvioPadrao(int opcao) {
+        //Construtor da classe pai
+        super(opcao);
     }
     
     @Override

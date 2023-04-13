@@ -3,8 +3,9 @@ import java.util.ArrayList;
 
 public class CalculoSomatorio extends AbstractMetodoCalculo{
     
-    public CalculoSomatorio(){
-        this.setOpcao(1);
+    public CalculoSomatorio(int opcao){
+        //Construtor da classe pai
+        super(opcao);
     }
     
     @Override

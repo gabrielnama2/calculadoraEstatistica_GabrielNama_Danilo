@@ -3,8 +3,9 @@ import java.util.ArrayList;
 
 public class CalculoVariancia extends AbstractMetodoCalculo{
 
-    public CalculoVariancia(){
-        this.setOpcao(4);
+    public CalculoVariancia(int opcao){
+        //Construtor da classe pai
+        super(opcao);
     }
     
     @Override

@@ -6,12 +6,12 @@ public class CalculadoraService {
     
     public CalculadoraService(){
         this.todosCalculos = new ArrayList<>();
-        this.todosCalculos.add(new CalculoDesvioPadrao());
-        this.todosCalculos.add(new CalculoMaior());
-        this.todosCalculos.add(new CalculoMedia());
-        this.todosCalculos.add(new CalculoMenor());
-        this.todosCalculos.add(new CalculoSomatorio());
-        this.todosCalculos.add(new CalculoVariancia());
+        this.todosCalculos.add(new CalculoDesvioPadrao(5));
+        this.todosCalculos.add(new CalculoMaior(2));
+        this.todosCalculos.add(new CalculoMedia(0));
+        this.todosCalculos.add(new CalculoMenor(3));
+        this.todosCalculos.add(new CalculoSomatorio(1));
+        this.todosCalculos.add(new CalculoVariancia(4));
     }
     
     public double calcular(int opcao, ArrayList<Double> numeros) {

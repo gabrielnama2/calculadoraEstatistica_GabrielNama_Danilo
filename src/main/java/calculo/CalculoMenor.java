@@ -4,8 +4,9 @@ import java.util.Collections;
 
 public class CalculoMenor extends AbstractMetodoCalculo{
 
-    public CalculoMenor(){
-        this.setOpcao(3);
+    public CalculoMenor(int opcao){
+        //Construtor da classe pai
+        super(opcao);
     }
     
     @Override
