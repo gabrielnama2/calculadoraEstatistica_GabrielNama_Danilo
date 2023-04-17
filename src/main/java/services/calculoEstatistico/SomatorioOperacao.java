@@ -1,17 +1,17 @@
 package services.calculoEstatistico;
-import model.DadosPeso;
+import model.IDado;
 import model.Resultado;
 
 public class SomatorioOperacao implements IOperacao{
     
     @Override
-    public void calcular(DadosPeso dadosPeso) {
+    public void calcular(IDado dados) {
         double soma = 0;
-        for (int counter = 0; counter < dadosPeso.getPesos().size(); counter++) {
-            soma += dadosPeso.getPesos().get(counter);
+        for (int counter = 0; counter < dados.getDados().size(); counter++) {
+            soma += dados.getDados().get(counter);
         }
         //Adiciona um novo Resultado a lista de resultados de dadosPeso
-        dadosPeso.addResultados(new Resultado("Somatório", soma));
+        dados.addResultados(new Resultado("Somatório", soma));
     }
     
 }

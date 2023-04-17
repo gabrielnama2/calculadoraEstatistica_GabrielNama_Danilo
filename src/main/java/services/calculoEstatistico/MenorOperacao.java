@@ -1,15 +1,15 @@
 package services.calculoEstatistico;
 import java.util.Collections;
-import model.DadosPeso;
+import model.IDado;
 import model.Resultado;
 
 public class MenorOperacao implements IOperacao{
     
     @Override
-    public void calcular(DadosPeso dadosPeso) {
-        double resultado = Collections.min(dadosPeso.getPesos());
+    public void calcular(IDado dados) {
+        double resultado = Collections.min(dados.getDados());
         //Adiciona um novo Resultado a lista de resultados de dadosPeso
-        dadosPeso.addResultados(new Resultado("Menor", resultado));
+        dados.addResultados(new Resultado("Menor", resultado));
     }
     
 }

@@ -1,3 +1,15 @@
-calculo\IMetodoCalculo.class
-principal\CalculoEstatisticoAntiPattern.class
+services\calculoEstatistico\MaiorOperacao.class
+model\DadosPeso.class
+services\calculoEstatistico\IOperacao.class
+presenter\PrincipalPresenter.class
+services\calculoEstatistico\DesvioPadraoOperacao.class
+view\PrincipalView$1.class
+view\PrincipalView$2.class
+services\calculoEstatistico\SomatorioOperacao.class
+model\IDado.class
+view\PrincipalView.class
+model\Resultado.class
+services\calculoEstatistico\VarianciaOperacao.class
 principal\Principal.class
+services\calculoEstatistico\MenorOperacao.class
+view\PrincipalView$3.class

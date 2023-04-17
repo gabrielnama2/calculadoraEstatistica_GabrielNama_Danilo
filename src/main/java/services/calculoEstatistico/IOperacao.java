@@ -1,6 +1,6 @@
 package services.calculoEstatistico;
-import model.DadosPeso;
+import model.IDado;
 
 public interface IOperacao {
-    public void calcular(DadosPeso dadosPeso);
+    public void calcular(IDado dados);
 }

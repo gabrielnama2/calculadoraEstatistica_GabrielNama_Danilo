@@ -1,24 +1,32 @@
 package model;
 import java.util.ArrayList;
 
-public class DadosPeso {
+public class DadosPeso implements IDado{
     private ArrayList<Double> dadosPesos = new ArrayList<>();
     private ArrayList<Resultado> todosResultados = new ArrayList<>();
     
-    public DadosPeso(ArrayList<Double> dados){
-        this.dadosPesos = dados;
+    public DadosPeso(ArrayList<Double> dadosLista){
+        this.dadosPesos = dadosLista;
+    }
+
+    @Override
+    public void addDados(double dado){
+        this.dadosPesos.add(dado);
     }
     
-    public ArrayList<Double> getPesos(){
+    @Override
+    public void addResultados(Resultado resultado){
+        this.todosResultados.add(resultado);
+    }
+    
+    @Override
+    public ArrayList<Double> getDados(){
         return this.dadosPesos;
     }
     
+    @Override
     public ArrayList<Resultado> getResultados(){
         return this.todosResultados;
-    }
-
-    public void addResultados(Resultado resultado){
-        this.todosResultados.add(resultado);
     }
     
     @Override

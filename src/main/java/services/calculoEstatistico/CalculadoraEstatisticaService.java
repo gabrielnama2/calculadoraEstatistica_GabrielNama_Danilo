@@ -11,6 +11,7 @@ public class CalculadoraEstatisticaService {
         this.todosCalculos.add(new MaiorOperacao());
         this.todosCalculos.add(new MediaOperacao());
         this.todosCalculos.add(new MenorOperacao());
+        this.todosCalculos.add(new QuantidadeElementos());
         this.todosCalculos.add(new SomatorioOperacao());
         this.todosCalculos.add(new VarianciaOperacao());
     }
