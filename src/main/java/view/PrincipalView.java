@@ -26,9 +26,9 @@ public class PrincipalView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tbtDadosPrincipal = new javax.swing.JTable();
         lbQuantidaDados = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         mbPrincipal = new javax.swing.JMenuBar();
         mbOpcoes = new javax.swing.JMenu();
         optImportarDados = new javax.swing.JMenuItem();
@@ -38,17 +38,9 @@ public class PrincipalView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora Estatística");
 
-        tbtDadosPrincipal.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane1.setViewportView(tbtDadosPrincipal);
-
         lbQuantidaDados.setText("Quantidade de dados:");
+
+        jScrollPane2.setViewportView(jTable1);
 
         mbOpcoes.setText("Opções");
 
@@ -89,16 +81,16 @@ public class PrincipalView extends javax.swing.JFrame {
                 .addComponent(lbQuantidaDados)
                 .addGap(78, 78, 78))
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(22, 22, 22)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(lbQuantidaDados)
                 .addGap(22, 22, 22))
         );
@@ -122,13 +114,13 @@ public class PrincipalView extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lbQuantidaDados;
     private javax.swing.JMenu mbOpcoes;
     private javax.swing.JMenuBar mbPrincipal;
     private javax.swing.JMenuItem optCalcularEstatisticas;
     private javax.swing.JMenuItem optImportarDados;
     private javax.swing.JMenuItem optVisualizarEstatisticas;
-    private javax.swing.JTable tbtDadosPrincipal;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,8 +6,8 @@ import view.PrincipalView;
 public class PrincipalPresenter {
     /*public PrincipalPresenter(){
         PrincipalView view = new PrincipalView();
-        
     }*/
+    private PrincipalView view;
     
     public void optImportarDados(PrincipalView view) {                                                 
         JFileChooser arquivoCSV = new JFileChooser();
@@ -16,6 +16,6 @@ public class PrincipalPresenter {
         arquivoCSV.setFileFilter(filtro);
         arquivoCSV.showOpenDialog(view);
         //Armazena os dados do arquivo na Classes DadosPeso
-        
-    }  
+    }
+    
 }

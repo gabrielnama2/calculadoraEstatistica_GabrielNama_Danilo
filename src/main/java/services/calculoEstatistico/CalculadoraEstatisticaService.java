@@ -1,6 +1,6 @@
 package services.calculoEstatistico;
 import java.util.ArrayList;
-import model.DadosPeso;
+import model.IDado;
 
 public class CalculadoraEstatisticaService {
     private ArrayList<IOperacao> todosCalculos;
@@ -16,9 +16,9 @@ public class CalculadoraEstatisticaService {
         this.todosCalculos.add(new VarianciaOperacao());
     }
     
-    public void calcular(DadosPeso dadosPesos) {
+    public void calcular(IDado dados) {
         for(int i=0; i<this.todosCalculos.size(); i++){
-            this.todosCalculos.get(i).calcular(dadosPesos);
+            this.todosCalculos.get(i).calcular(dados);
         }  
     }
 }
