@@ -1,17 +1,19 @@
 package view;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JTable;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import presenter.PrincipalPresenter;
 import presenter.ResultadosCalculosEstatisticosPresenter;
 
 public class PrincipalView extends javax.swing.JFrame {
 
+    private PrincipalPresenter principalPresenter = new PrincipalPresenter(this);
+    
     public PrincipalView() {
         initComponents();
         setVisible(true);
         this.setLocationRelativeTo(this.getParent());
-        //this.setExtendedState(WIDTH);
-        //this.setExtendedState(MAXIMIZED_BOTH);
     }
     
     @SuppressWarnings("unchecked")
@@ -21,6 +23,7 @@ public class PrincipalView extends javax.swing.JFrame {
         lbQuantidaDados = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblDados = new javax.swing.JTable();
+        qtdDados = new javax.swing.JLabel();
         mbPrincipal = new javax.swing.JMenuBar();
         mbOpcoes = new javax.swing.JMenu();
         optImportarDados = new javax.swing.JMenuItem();
@@ -33,6 +36,8 @@ public class PrincipalView extends javax.swing.JFrame {
         lbQuantidaDados.setText("Quantidade de dados:");
 
         jScrollPane2.setViewportView(tblDados);
+
+        qtdDados.setText("0");
 
         mbOpcoes.setText("Opções");
 
@@ -68,43 +73,54 @@ public class PrincipalView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(604, Short.MAX_VALUE)
-                .addComponent(lbQuantidaDados)
-                .addGap(78, 78, 78))
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lbQuantidaDados)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(qtdDados, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(lbQuantidaDados)
-                .addGap(22, 22, 22))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbQuantidaDados)
+                    .addComponent(qtdDados))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    private PrincipalPresenter principalPresenter = new PrincipalPresenter();
-    
+
     private void optImportarDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optImportarDadosActionPerformed
-        this.principalPresenter.optImportarDados(this);
+        this.principalPresenter.optImportarDados();
         
     }//GEN-LAST:event_optImportarDadosActionPerformed
 
     private void optVisualizarEstatisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optVisualizarEstatisticasActionPerformed
-        ResultadosCalculosEstatisticosPresenter presenterResultados = new ResultadosCalculosEstatisticosPresenter ();
+        //ResultadosCalculosEstatisticosPresenter resultadosCalculosPresenter = new ResultadosCalculosEstatisticosPresenter ();
+        //ResultadosCalculosEstatisticosView ResultadosView = new ResultadosCalculosEstatisticosView();
+        this.principalPresenter.optVisualizarEstatisticas();
     }//GEN-LAST:event_optVisualizarEstatisticasActionPerformed
 
     private void optCalcularEstatisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optCalcularEstatisticasActionPerformed
-        this.principalPresenter.optCalcularEstatisticas(this);
+        this.principalPresenter.optCalcularEstatisticas();
     }//GEN-LAST:event_optCalcularEstatisticasActionPerformed
 
+    public JTable getTblDados() {
+        return tblDados;
+    }
+    
+    public JLabel getQtdDados() {
+        return qtdDados;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane2;
@@ -114,6 +130,7 @@ public class PrincipalView extends javax.swing.JFrame {
     private javax.swing.JMenuItem optCalcularEstatisticas;
     private javax.swing.JMenuItem optImportarDados;
     private javax.swing.JMenuItem optVisualizarEstatisticas;
+    private javax.swing.JLabel qtdDados;
     private javax.swing.JTable tblDados;
     // End of variables declaration//GEN-END:variables
 }
