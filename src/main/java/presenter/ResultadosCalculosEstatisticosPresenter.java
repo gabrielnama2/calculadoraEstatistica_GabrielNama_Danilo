@@ -4,12 +4,12 @@ import java.awt.event.ActionListener;
 import view.ResultadosCalculosEstatisticosView;
 
 public class ResultadosCalculosEstatisticosPresenter {
-    private ResultadosCalculosEstatisticosView view;
+    private ResultadosCalculosEstatisticosView viewResultados;
     
     public ResultadosCalculosEstatisticosPresenter(){
-        view = new ResultadosCalculosEstatisticosView();
+        viewResultados = new ResultadosCalculosEstatisticosView();
         
-        view.getBtnFechar().addActionListener(new ActionListener(){
+        viewResultados.getBtnFechar().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 fecharJanela();
@@ -19,6 +19,6 @@ public class ResultadosCalculosEstatisticosPresenter {
     }
     
     public void fecharJanela(){
-        view.dispose();
+        viewResultados.dispose();
     }
 }
