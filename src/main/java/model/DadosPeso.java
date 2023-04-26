@@ -5,9 +5,9 @@ public class DadosPeso implements IDado{
     private ArrayList<Double> dadosPesos = new ArrayList<>();
     private ArrayList<Resultado> todosResultados = new ArrayList<>();
     
-    public DadosPeso(ArrayList<Double> dadosLista){
+    /*public DadosPeso(ArrayList<Double> dadosLista){
         this.dadosPesos = dadosLista;
-    }
+    }*/
 
     @Override
     public void addDados(double dado){
