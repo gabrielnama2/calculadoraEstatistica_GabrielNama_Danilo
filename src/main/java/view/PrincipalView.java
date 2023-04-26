@@ -1,15 +1,10 @@
 package view;
-import javax.swing.JFileChooser;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JTable;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import presenter.PrincipalPresenter;
-import presenter.ResultadosCalculosEstatisticosPresenter;
 
 public class PrincipalView extends javax.swing.JFrame {
-
-    private PrincipalPresenter principalPresenter = new PrincipalPresenter(this);
-    
+  
     public PrincipalView() {
         initComponents();
         setVisible(true);
@@ -100,20 +95,29 @@ public class PrincipalView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void optImportarDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optImportarDadosActionPerformed
-        this.principalPresenter.optImportarDados();
-        
+      
     }//GEN-LAST:event_optImportarDadosActionPerformed
 
     private void optVisualizarEstatisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optVisualizarEstatisticasActionPerformed
-        //ResultadosCalculosEstatisticosPresenter resultadosCalculosPresenter = new ResultadosCalculosEstatisticosPresenter ();
-        //ResultadosCalculosEstatisticosView ResultadosView = new ResultadosCalculosEstatisticosView();
-        this.principalPresenter.optVisualizarEstatisticas();
+
     }//GEN-LAST:event_optVisualizarEstatisticasActionPerformed
 
     private void optCalcularEstatisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optCalcularEstatisticasActionPerformed
-        this.principalPresenter.optCalcularEstatisticas();
+
     }//GEN-LAST:event_optCalcularEstatisticasActionPerformed
 
+    public JMenuItem getOptCalcularEstatisticas() {
+        return optCalcularEstatisticas;
+    }
+
+    public JMenuItem getOptImportarDados() {
+        return optImportarDados;
+    }
+
+    public JMenuItem getOptVisualizarEstatisticas() {
+        return optVisualizarEstatisticas;
+    }
+    
     public JTable getTblDados() {
         return tblDados;
     }

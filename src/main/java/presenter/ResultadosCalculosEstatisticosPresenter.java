@@ -13,18 +13,20 @@ public class ResultadosCalculosEstatisticosPresenter {
         viewResultados = new ResultadosCalculosEstatisticosView();
         this.atualizarTabela(dadosPeso);
         
+        //Escuta o botão "Fechar"
         viewResultados.getBtnFechar().addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 fecharJanela();
             }
         });
+        
     }
     
     public void atualizarTabela(DadosPeso dadosPeso) {
         DefaultTableModel tabelaCalculos = new DefaultTableModel();
         //Adiciona a coluna "Dados"
-        tabelaCalculos.addColumn("Dados"); 
+        tabelaCalculos.addColumn("Resultados"); 
         //Preenche as linhas com dados
         for (Resultado resultado : dadosPeso.getResultados()) {
             tabelaCalculos.addRow(new Object[]{resultado});

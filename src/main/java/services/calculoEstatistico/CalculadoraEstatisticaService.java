@@ -2,7 +2,7 @@ package services.calculoEstatistico;
 import java.util.ArrayList;
 import model.IDado;
 
-public class CalculadoraEstatisticaService {
+public class CalculadoraEstatisticaService implements ICalculadora{
     private ArrayList<IOperacao> todosCalculos;
     
     public CalculadoraEstatisticaService(){
@@ -16,6 +16,7 @@ public class CalculadoraEstatisticaService {
         this.todosCalculos.add(new VarianciaOperacao());
     }
     
+    @Override
     public void calcular(IDado dados) {
         for(int i=0; i<this.todosCalculos.size(); i++){
             this.todosCalculos.get(i).calcular(dados);
